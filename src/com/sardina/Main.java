@@ -24,21 +24,20 @@ public class Main {
 
         String results[] = showResults(sum, difference, division, multiplication, remainder);
 
-        for (String result: results) {
-            System.out.println(result);
-        }
+        for(String result: results) System.out.println(result);
     }
-    public static String[] showResults(double add,
-                                       double diff,
-                                       double div,
-                                       double multi,
-                                       double remain) {
 
-        String sumResult = "The sum of your two numbers is " + add + ".";
-        String differenceResult = "The difference between your two numbers is " + diff + ".";
-        String divisionResult = "Your quotient of your two numbers is " + div + ".";
-        String multiplicationResult = "The product of your two numbers is " + multi + ".";
-        String moduloResult = "The remainder (modulo) when your two numbers are divided is " + remain + ".";
+    public static String[] showResults(double sum,
+                                       double difference,
+                                       double division,
+                                       double multiplication,
+                                       double remainder) {
+
+        String sumResult = "The sum of your two numbers is " + sum + ".";
+        String differenceResult = "The difference between your two numbers is " + difference + ".";
+        String divisionResult = "Your quotient of your two numbers is " + division + ".";
+        String multiplicationResult = "The product of your two numbers is " + multiplication + ".";
+        String moduloResult = "The remainder (modulo) when your two numbers are divided is " + remainder + ".";
 
         return new String[] {sumResult, differenceResult, divisionResult, multiplicationResult, moduloResult};
     }
