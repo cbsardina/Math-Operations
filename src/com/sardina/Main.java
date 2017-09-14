@@ -20,9 +20,26 @@ public class Main {
         double difference = operand1 - operand2;
         double division = operand1 / operand2;
         double multiplication = operand1 * operand2;
+        double remainder = operand1 % operand2;
 
+        String results[] = showResults(sum, difference, division, multiplication, remainder);
 
-        System.out.println("Just text");
+        for (String result: results) {
+            System.out.println(result);
+        }
     }
+    public static String[] showResults(double add,
+                                       double diff,
+                                       double div,
+                                       double multi,
+                                       double remain) {
 
+        String sumResult = "The sum of your two numbers is " + add + ".";
+        String differenceResult = "The difference between your two numbers is " + diff + ".";
+        String divisionResult = "Your quotient of your two numbers is " + div + ".";
+        String multiplicationResult = "The product of your two numbers is " + multi + ".";
+        String moduloResult = "The remainder (modulo) when your two numbers are divided is " + remain + ".";
+
+        return new String[] {sumResult, differenceResult, divisionResult, multiplicationResult, moduloResult};
+    }
 }
